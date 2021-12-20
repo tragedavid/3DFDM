@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: #050505;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 20px 0 20px 0;
+    color: #FFFFFF;
+/* background: #232323; */
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    font-family: "Amita", Sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+#main-video {
+    padding: 100px 0 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: purple; */
+}
+
+#main-video > video {
+    width: 50%;
+}
+
+h3.progress-text > span {
+    transition: all 0.8s;
+}
+
+span.cube {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* animation: cube-floating 4s linear infinite; */
+}
+
+h3.progress-text {
+    font-size: 48px;
+    color: white;
+}
+
+.glowing-cube {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(225deg);
+    /* animation: cube-rotation 4s linear infinite; */
+}
+
+@keyframes cube-rotation {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+@keyframes cube-floating {
+    0% {
+
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.glowing-cube div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.glowing-cube div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#151515, #00ec00d0);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
+    animation: greenification 8s linear infinite;
+    /* effet bizarrement stylé : */
+    /* animation: cube-floating 4s linear infinite;  */
+}
+
+@keyframes greenification {
+    0% {
+        background: linear-gradient(#151515, rgb(128, 128, 128));
+    }
+
+    100% {
+        background: linear-gradient(#151515, rgb(128, 250, 128));
+    }
+}
+
+.glowing-cube-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #00ec00d0;
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.glowing-cube-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: #0ad30a;
+    transform: translateZ(-150px);
+    filter: blur(20px);
+    box-shadow: 0 0 60px rgba(0, 255, 0, 0.2),
+    0 0 100px rgba(0, 255, 0, 0.4),
+    0 0 150px rgba(0, 255, 0, 0.6),
+    0 0 200px rgba(0, 255, 0, 0.8),
+    0 0 250px rgba(0, 255, 0, 1)
+    ;
+    animation: cube-floating 8s linear infinite;
+}
+
+
+

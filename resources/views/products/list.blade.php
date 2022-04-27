@@ -8,7 +8,7 @@
     var img3 = new Image().src = "../images/pht.gif"
     </script>
     
-    <h1 class="text-center">Produits</h1>    
+    <h1 class="text-center">Profitez de nos Produits</h1>    
     <a class="btn btn-primary btn-lg active btn-block" role="button" aria-pressed="true" href="{{url('/acp/product/create')}}">Ajouter un produit</a> <br>
     
     
@@ -39,7 +39,33 @@
         </div>
         {{-- @endforeach --}}
         
-    
+        <div id="product-card">
+            <div id="product-front">
+                <div class="shadow"></div>
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="" />
+                <div class="image_overlay"></div>
+                <div id="view_details">View details</div>
+                <div class="stats">        	
+                    <div class="stats-container">
+                        <span class="product_price">$39</span>
+                        <span class="product_name">Adidas Originals</span>    
+                        <p>Men's running shirt</p>                                            
+                        
+                        <div class="product-options">
+                        <strong>SIZES</strong>
+                        <span>XS, S, M, L, XL, XXL</span>
+                        <strong>COLORS</strong>
+                        <div class="colors">
+                            <div class="c-blue"><span></span></div>
+                            <div class="c-red"><span></span></div>
+                            <div class="c-white"><span></span></div>
+                            <div class="c-green"><span></span></div>
+                        </div>
+                    </div>                       
+                    </div>                         
+                </div>
+            </div>
+        </div>
     
     @endforeach
 

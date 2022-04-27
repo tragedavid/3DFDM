@@ -72,4 +72,21 @@ class ProductController extends Controller
         ->withProducts($products)
         ;
     }
+
+    // user controllers
+    public function userList() {
+        $products = Product::all();
+        foreach ($products as $product) {
+            $matches = explode(".", $product->image);
+            $product->extension = $matches[1];
+        }
+        return view('user.products')
+        ->withProducts($products)
+        ;
+    }
+
+    public function product() {
+
+        return view('user.product');
+    }
 }

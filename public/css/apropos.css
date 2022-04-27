@@ -1,0 +1,36 @@
+body {
+    background: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+}
+
+h1 {
+    color: white;
+    text-shadow: 5px 5px 10px rgb(32, 29, 72);
+}
+
+.bande {
+    width: 100%;
+    padding: 3rem 0 3rem 0;
+    margin: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+}
+
+.bande > * {
+    padding: 1rem;
+}
+
+.bande h2 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    text-align: center;
+    padding: 1rem;
+}
+
+.bande img {
+    width: 700px;
+    height: 400px;
+    border-radius: 5%;
+}

@@ -1,14 +1,44 @@
 * {
     margin: 0;
+    text-decoration: none;
 }
 
 body {
     background: #050505;
 }
 
+header {
+    display: flex;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    /* background-color: #161616; */
+    background-color: rgb(32 29 72);
+    box-shadow: 0 5px 10px #7367F0;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li {
+    margin: 0 2rem 0 2rem;
+    color: white;
+    font-size: 32px;
+}
+
+header nav li a {
+    color: white;
+}
+
 h1 {
     font-size: 50px;
-    padding: 20px 0 20px 0;
+    padding: 3rem 0 3rem 0;
     color: #FFFFFF;
 /* background: #232323; */
 text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
@@ -17,16 +47,32 @@ text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 3
     text-align: center;
 }
 
+.last-product-buy {
+    padding: 1rem;
+    font-size: 32px;
+    color: white;
+    background-color: #72d30a;
+    box-shadow: 0px 0px 16px 0px skyblue;
+    border-radius: 1rem;
+}
+
+.last-product-buy:hover {
+    color: skyblue;
+    background-color: white;
+    text-shadow: 0px 0px 16px 0px #72d30a;
+}
+
 #main-video {
-    padding: 100px 0 100px 0;
+    /* padding: 100px 0 100px 0; */
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5rem 0 5rem 0;
     width: 100%;
     /* background-color: purple; */
 }
 
-#main-video > video {
+#main-video > video, #main-video > img {
     width: 50%;
 }
 
@@ -40,12 +86,14 @@ span.cube {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 25%;
     height: 100%;
     /* animation: cube-floating 4s linear infinite; */
 }
 
 h3.progress-text {
+    margin-top: 2rem;
+    cursor: pointer;
     font-size: 48px;
     color: white;
 }
@@ -97,7 +145,7 @@ h3.progress-text {
     height: 100%;
     background: linear-gradient(#151515, #00ec00d0);
     transform: rotateY(calc(90deg * var(--i))) translateZ(75px);
-    animation: greenification 8s linear infinite;
+    /* animation: greenification 8s linear infinite; */
     /* effet bizarrement stylé : */
     /* animation: cube-floating 4s linear infinite;  */
 }
@@ -138,8 +186,213 @@ h3.progress-text {
     0 0 200px rgba(0, 255, 0, 0.8),
     0 0 250px rgba(0, 255, 0, 1)
     ;
-    animation: cube-floating 8s linear infinite;
+    animation: cube-floating 8s linear;
 }
 
+#avantages-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8rem 0 8rem 0;
+    /* background-color: rgb(185, 176, 176); */
+    background: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+    /* opacity: 0.6; */
+}
 
+#avantages-article h3 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px 10px rgb(32, 29, 72);
+}
 
+#avantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.avantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 3rem 0 3rem 0;
+    margin: 2rem;
+    border: 1px solid green;
+    border-radius: 2rem;
+}
+
+.avantage > img {
+    width: 50px;
+    height: 50px;
+}
+
+.avantage > * {
+    margin: 1rem 0 1rem 0;
+}
+
+.avantage:hover {
+    cursor: pointer;
+    background-color: rgba(10, 211, 10, 0.7);
+}
+
+#apropos {
+    display: flex;
+    justify-content: center;
+}
+
+#apropos > a {
+    color: white;
+    padding: 1rem;
+    font-size: 15px;
+    background-color: #72d30a;
+    box-shadow: 0px 0px 16px 0px skyblue;
+    border-radius: 1rem;
+}
+
+#apropos > a:hover  {
+    color: skyblue;
+    background-color: white;
+    box-shadow: 0px 0px 16px 0px #72d30a;
+}
+
+#space-product-article {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#space-product-article img {
+    width: 100%;
+}
+
+#space-product-article h3, #space-product-article h6, #space-product-article a {
+    position: absolute;
+    right: 5rem;
+}
+#space-product-article h3 {
+    text-shadow: 5px 5px 10px rgb(32, 29, 72);
+    font-size: 38px;
+    bottom: 50%;
+}
+#space-product-article h6 {
+    text-shadow: 5px 5px 10px rgb(32, 29, 72);
+    font-size: 24px;
+    top: 50%;
+}
+#space-product-article a {
+    color: black;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid skyblue;
+    border-radius: 0.5rem;
+    bottom: 20%;
+    box-shadow: 0px 0px 16px 0px skyblue;
+}
+#space-product-article a:hover {
+    color: white;
+    background-color: black;
+    
+}
+
+#produits-phares-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 0 8rem 0;
+    background: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+}
+
+#produits-phares-article h3 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 5px 5px 10px rgb(32, 29, 72);
+}
+
+#produits-phares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* width: 90%; */
+}
+
+#produit-phare {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* gap: 3rem; */
+    padding: 3rem;
+    margin: 3rem;
+    justify-content: center;
+    align-items: center;
+    /* width: 40%; */
+    /* background-color: mediumseagreen; */
+    background-color: rgb(100, 247, 198);
+    border-radius: 2rem;
+    box-shadow: 10px 10px 10px 10px rgb(32, 29, 72);
+}
+
+#produit-phare img {
+    width: 350px;
+    height: 350px;
+    border-radius: 3%;
+}
+
+#produit-phare h3 {
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 10px black;
+    padding-bottom: 1rem;
+}
+
+#produit-phare #price {
+    color: rgb(21, 89, 116);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#produit-phare #buy {
+    float: right;
+    padding: 1rem;
+    font-size: 15px;
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 16px 16px skyblue;
+    border-radius: 1rem;
+}
+
+#produit-phare #buy:hover {
+    color: white;
+    background-color: skyblue;
+    box-shadow: 0 0 16px 16px white;
+}
+
+footer {
+    width: 100%;
+    padding: 3rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: white;
+    background-color: rgb(32, 29, 72);
+}
+footer .col {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    width: 20%;
+}
+footer h3 {
+    padding: 0 0 2rem 0;
+}
+
+footer a {
+    color: white;
+    padding: 0.5rem;
+}
+footer a:hover {
+    text-decoration: underline;
+}

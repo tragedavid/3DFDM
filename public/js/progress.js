@@ -13,14 +13,14 @@ function increase() {
     if(count <= 100) {
         for(let i=0; i < texts.length; i++) {
             // texts[i].style.color = "purple";
-            texts[i].textContent = count;
+            texts[i].textContent = count + " %";
         }
     }
     else {
         count = 101;
         for(let i=0; i < texts.length; i++) {
             path = "ferth";
-            texts[i].innerHTML = '<a href="' + path + '">Produit imprimé</a>';
+            texts[i].innerHTML = '<a class="last-product-buy" href="' + path + '">Ajouter au panier</a><br>';
         }
     }
 }

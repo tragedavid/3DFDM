@@ -40,4 +40,7 @@ Route::delete('/acp/filament/delete/{id}', 'FilamentController@delete');
 
 //user routes
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/products', 'ProductController@userList');
+Route::get('/apropos', 'UserController@apropos');
+Route::get('/contact', 'UserController@contact');
+Route::get('/product', 'ProductController@product');
